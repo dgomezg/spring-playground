@@ -1,0 +1,28 @@
+apply from: "project.gradle"
+
+project.ext {
+    springVersion='3.2.3.RELEASE'
+    springSecurityVersion='3.1.4.RELEASE'
+}
+
+configurations {
+// sources.exclude group: 'net.sf.saxon', module: 'saxon'
+//    sources.exclude group: 'mysql'
+}
+ 
+dependencies {
+	compile 		"com.google.guava:guava:r05",
+                    "com.github.leleuj.springframework.security:spring-security-oauth-client:1.1.0",
+                    "org.slf4j:slf4j-api:1.6.1",
+                    'org.slf4j:slf4j-log4j12:1.6.6',
+            //TODO: Check why if the properties for version are used, IntelliJ does not resolve the dependencies
+                    'org.springframework:spring-core:3.2.3.RELEASE',
+                    'org.springframework:spring-webmvc:3.2.3.RELEASE',
+                    'org.springframework.security:spring-security-config:3.1.4.RELEASE',
+                    'org.springframework.security:spring-security-core:3.1.4.RELEASE',
+                    'org.springframework.security:spring-security-web:3.1.4.RELEASE'
+
+    testCompile 	"junit:junit:4.5",
+                    "org.springframework:spring-test:3.2.3.RELEASE"
+
+}

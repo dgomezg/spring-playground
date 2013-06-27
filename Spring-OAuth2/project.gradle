@@ -1,0 +1,21 @@
+apply plugin: 'java'
+//apply from: "sources.gradle"
+//apply from: "genlib.gradle"
+
+sourceCompatibility = '1.7'
+targetCompatibility = '1.7'
+
+defaultTasks 'build'
+
+project.version = '0.1-SNAPSHOT'
+
+/*
+# replace these two entries with your own in ~/.gradle/gradle.properties
+project.sonatypeUsername=your_username
+project.sonatypePassword=your_password
+*/
+repositories {
+	// mavenRepo name: 'nexus', urls: 'http://gitrepo:8081/nexus/content/repositories/releases'
+    mavenCentral()
+    // mavenRepo name: 'snapshots', urls: 'http://gitrepo:8081/nexus/content/repositories/snapshots'
+}
